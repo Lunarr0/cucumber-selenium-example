@@ -40,7 +40,8 @@ public class HomePage {
         "Login", By.id("login-button"),
         "Cart", By.className("shopping_cart_link"),
         "Checkout", By.id("checkout"),
-        "Continue", By.id("continue")
+        "Continue", By.id("continue"),
+            "Finish", By.id("finish")
     );
 
     public HomePage(WebDriver driver) {
@@ -76,4 +77,8 @@ public class HomePage {
         return priceLabel.getText();
     }
 
+    public String getPageUrl() {
+        return driver.getCurrentUrl();
+
+    }
 }
